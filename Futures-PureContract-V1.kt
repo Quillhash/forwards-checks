@@ -186,9 +186,9 @@ class forwardContract: Contract,Obligation {
                 val received = tx.outputs.sumCashBy(input.owner)
                 val time = timeWindow?.fromTime ?: throw IllegalArgumentException("Redemptions must have a time-window")
                 requireThat {
-                    "the paper must have matured" using (time >= input.maturityDate)
+                    "the futures must have matured" using (time >= input.maturityDate)
                     "the cleared amount equals the lot size" using (received == input.lotSize)
-                    "the paper must be destroyed" using outputs.isEmpty()
+                    "the futures must be destroyed" using outputs.isEmpty()
                     "the transaction is signed by the owner of the CP" using (input.owner.owningKey in command.signers)
                 }
 
@@ -225,31 +225,39 @@ class forwardContract: Contract,Obligation {
     }
 
     /**
-     * Updates the given partial transaction with an input/output/command to reassign ownership of the paper.
+     * Updates the given partial transaction with an input/output/command to reassign ownership of the futures.
      */
-    fun generateMove(tx: TransactionBuilder, paper: StateAndRef<State>, newOwner: AbstractParty) {
-        tx.addInputState(paper)
-        tx.addOutputState(TransactionState(paper.state.data.copy(owner = newOwner), paper.state.notary))
-        tx.addCommand(Commands.Move(), paper.state.data.owner.owningKey)
-        //Change paper name to something and see for additional changes
+    fun generateMove(tx: TransactionBuilder, futures: StateAndRef<State>, newOwner: AbstractParty) {
+        tx.addInputState(futures)
+        tx.addOutputState(TransactionState(futures.state.data.copy(owner = newOwner), futures.state.notary))
+        tx.addCommand(Commands.Move(), futures.state.data.owner.owningKey)
+        //Change futures name to something and see for additional changes
+    }
+
+    // Needs work (a f lot)
+    fun generateAgreement(owner: PartyAndReference, newOwner: PartyAndReference,val asset: Issued<Currency>,val dDate: LocalDate, 
+                          val grade: Char, val lotSize: Int, val maturityDate: Instant, notary: Party): TransactionBuilder {
+
+        //val state = State(fixedLeg, floatingLeg, newCalculation, common)
+        return TransactionType.General.Builder(notary = notary).withItems(state, Command(Commands.Agree(), listOf(state.Owner.owningKey, state.newOwner.owningKey)))
     }
 
     /**
      * Intended to be called by the issuer of some Contract, when an owner has notified us that they wish
-     * to redeem the paper. We must therefore send enough money to the key that owns the paper to satisfy the face
-     * value, and then ensure the paper is removed from the ledger.
+     * to redeem the futures. We must therefore send enough money to the key that owns the futures to satisfy the face
+     * value, and then ensure the futures is removed from the ledger.
      *
      * @throws InsufficientBalanceException if the vault doesn't contain enough money to pay the redeemer.
      */
 
     @Throws(InsufficientBalanceException::class)
     @Suspendable
-    fun generateRedeem(tx: TransactionBuilder, paper: StateAndRef<State>, vault: VaultService) {
+    fun generateRedeem(tx: TransactionBuilder, futures: StateAndRef<State>, vault: VaultService) {
         // Add the cash movement using the states in our vault.
-        val amount = paper.state.data.faceValue.let { amount -> Amount(amount.quantity, amount.token.product) }
-        vault.generateSpend(tx, amount, paper.state.data.owner)
-        tx.addInputState(paper)
-        tx.addCommand(CommercialPaper.Commands.Redeem(), paper.state.data.owner.owningKey)
+        val amount = futures.state.data.lotSize.let { amount -> Amount(amount.lotSize, amount.asset) }
+        vault.generateSpend(tx, amount, futures.state.data.owner)
+        tx.addInputState(futures)
+        tx.addCommand(FuturesContract.Commands.Redeem(), futures.state.data.owner.owningKey)
 
         // SEE ALL CHANGES 
     }
