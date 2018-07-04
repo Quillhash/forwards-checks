@@ -20,7 +20,7 @@ Defination of each jargon used :
 
 
 	Forwards : Agreement between two, where the terms are confirmed by all parties involved and subsequently fulfilled as time passes and contract matures.
-			For more see : <a href="https://www.investopedia.com/terms/f/forwardcontract.asp"></a>
+			For more see : "https://www.investopedia.com/terms/f/forwardcontract.asp"
 
 	Exchange-Traded : Assets which are traded purely on servers without involvement of humans ex.NYSE
 			For more see : "https://www.investopedia.com/terms/e/exchange-traded-derivative.asp"
