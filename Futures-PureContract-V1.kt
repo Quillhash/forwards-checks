@@ -1,4 +1,47 @@
 //Contract Code
+import net.corda.contracts.asset.sumCashBy
+import net.corda.contracts.clause.AbstractIssue
+import net.corda.core.contracts.*
+import net.corda.core.contracts.clauses.AnyOf
+import net.corda.core.contracts.clauses.Clause
+import net.corda.core.contracts.clauses.GroupClauseVerifier
+import net.corda.core.contracts.clauses.verifyClause
+import net.corda.core.crypto.SecureHash
+import net.corda.core.crypto.toBase58String
+import net.corda.core.node.services.VaultService
+import net.corda.core.random63BitValue
+import net.corda.core.schemas.MappedSchema
+import net.corda.core.schemas.PersistentState
+import net.corda.core.schemas.QueryableState
+import net.corda.core.utilities.Emoji
+import co.paralleluniverse.fibers.Suspendable
+import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonProperty
+import net.corda.core.contracts.*
+import net.corda.core.contracts.clauses.*
+import net.corda.core.crypto.SecureHash
+import net.corda.core.crypto.containsAny
+import net.corda.core.flows.FlowLogicRefFactory
+import net.corda.core.identity.AbstractParty
+import net.corda.core.identity.Party
+import net.corda.core.node.services.ServiceType
+import net.corda.core.serialization.CordaSerializable
+import net.corda.core.transactions.TransactionBuilder
+import net.corda.irs.api.NodeInterestRates
+import net.corda.irs.flows.FixingFlow
+import net.corda.irs.utilities.suggestInterestRateAnnouncementTimeWindow
+import org.apache.commons.jexl3.JexlBuilder
+import org.apache.commons.jexl3.MapContext
+import java.math.BigDecimal
+import java.math.RoundingMode
+import java.security.PublicKey
+import java.time.LocalDate
+import java.time.Instant
+import java.util.*
+
+
+
 
 class forwardContract: Contract,Obligation {
 
@@ -208,12 +251,6 @@ class forwardContract: Contract,Obligation {
         class Redeem : TypeOnlyCommandData(), Commands // Trade has matured; Pay Dues.
     }
 
-//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
-//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
-//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
-//-------------------------------------------------------------Needs updating-\/---------------------------------------------------------------------------------
-
-
     /**
      * Returns a transaction that issues the contract, owned by the issuing parties key. Does not update
      * an existing transaction because you aren't able to issue multiple pieces in a single transaction
@@ -234,6 +271,25 @@ class forwardContract: Contract,Obligation {
         //Change futures name to something and see for additional changes
     }
 
+    
+    @Throws(InsufficientBalanceException::class)
+    @Suspendable
+    fun generateRedeem(tx: TransactionBuilder, futures: StateAndRef<State>, vault: VaultService) {
+        // Add the cash movement using the states in our vault.
+        val amount = futures.state.data.lotSize.let { amount -> Amount(amount.lotSize, amount.asset) }
+        vault.generateSpend(tx, amount, futures.state.data.owner)
+        tx.addInputState(futures)
+        tx.addCommand(FuturesContract.Commands.Redeem(), futures.state.data.owner.owningKey)
+
+        // SEE ALL CHANGES 
+    }
+
+
+//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
+//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
+//-------------------------------------------------------------Needs updating-||---------------------------------------------------------------------------------
+//-------------------------------------------------------------Needs updating-\/---------------------------------------------------------------------------------
+
     // Needs work (a f lot)
     fun generateAgreement(owner: PartyAndReference, newOwner: PartyAndReference,val asset: Issued<Currency>,val dDate: LocalDate, 
                           val grade: Char, val lotSize: Int, val maturityDate: Instant, notary: Party): TransactionBuilder {
@@ -250,17 +306,7 @@ class forwardContract: Contract,Obligation {
      * @throws InsufficientBalanceException if the vault doesn't contain enough money to pay the redeemer.
      */
 
-    @Throws(InsufficientBalanceException::class)
-    @Suspendable
-    fun generateRedeem(tx: TransactionBuilder, futures: StateAndRef<State>, vault: VaultService) {
-        // Add the cash movement using the states in our vault.
-        val amount = futures.state.data.lotSize.let { amount -> Amount(amount.lotSize, amount.asset) }
-        vault.generateSpend(tx, amount, futures.state.data.owner)
-        tx.addInputState(futures)
-        tx.addCommand(FuturesContract.Commands.Redeem(), futures.state.data.owner.owningKey)
-
-        // SEE ALL CHANGES 
-    }
+    
 
 
 
