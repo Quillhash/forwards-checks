@@ -22,7 +22,7 @@ Defination of each jargon used :
 	Forwards : Agreement between two, where the terms are confirmed by all parties involved and subsequently fulfilled as time passes and contract matures.
 			For more see : "https://www.investopedia.com/terms/f/forwardcontract.asp"
 
-	Exchange-Traded : Assets which are traded purely on servers without involvement of humans ex.NYSE
+	Exchange-Traded : Assets which are traded purely on servers without involvement of humans ex.NYSE stock exchange 
 			For more see : "https://www.investopedia.com/terms/e/exchange-traded-derivative.asp"
 
 	Over-the-Counter(OTC) : A exchange where multiple parties come to an agreement through various communication modes such as the telephone, email, and proprietary electronic trading systems. An over-the-counter (OTC) market and an exchange market are the two basic ways of organizing financial markets
