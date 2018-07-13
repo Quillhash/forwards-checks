@@ -1,0 +1,565 @@
+[INFO ] 2018-07-10T07:07:00,897Z [main] manifests.Manifests.info - 109 attributes loaded from 121 stream(s) in 6s, 109 saved, 1664 ignored: ["ActiveMQ-Version", "Agent-Class", "Ant-Version", "App-Class-Path", "Application-Class", "Application-Library-Allowable-Codebase", "Application-Name", "Application-Version", "Archiver-Version", "Bnd-LastModified", "Branch", "Build-Date", "Build-Host", "Build-Id", "Build-Java-Version", "Build-Jdk", "Build-Job", "Build-Number", "Build-Timestamp", "Built-By", "Built-OS", "Built-Status", "Bundle-Activator", "Bundle-Category", "Bundle-ClassPath", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "CLDR-Version", "Caller-Allowable-Codebase", "Can-Redefine-Classes", "Can-Retransform-Classes", "Caplets", "Change", "Class-Path", "Codebase", "Corda-Platform-Version", "Corda-Release-Version", "Corda-Revision", "Corda-Vendor", "Created-By", "DynamicImport-Package", "Eclipse-BuddyPolicy", "Eclipse-LazyStart", "Export-Package", "Extension-Name", "Fragment-Host", "Gradle-Version", "Ignore-Package", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Url", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "JVM-Args", "Java-Agents", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Main-Class", "Main-class", "Manifest-Version", "Min-Java-Version", "Min-Update-Version", "Module-Email", "Module-Origin", "Module-Owner", "Module-Source", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Package", "Permissions", "Premain-Class", "Private-Package", "Provide-Capability", "Require-Capability", "Scm-Connection", "Scm-Revision", "Scm-Url", "Service-Component", "Specification-Title", "Specification-Vendor", "Specification-Version", "System-Properties", "Time-Zone-Database-Version", "Tool", "Trusted-Library", "X-Compile-Source-JDK", "X-Compile-Target-JDK"]
+[INFO ] 2018-07-10T07:07:02,011Z [main] BasicInfo.printBasicNodeInfo - Logs can be found in                    : /home/laddha/forwards-check/build/nodes/NodeA/logs
+[INFO ] 2018-07-10T07:07:02,808Z [main] config.ConfigHelper.loadConfig - Config:
+{
+    # hardcoded value
+    "basedir" : "/home/laddha/forwards-check/build/nodes/NodeA",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 13
+    "certificateSigningService" : "https://cordaci-netperm.corda.r3cev.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 6
+    "dataSourceProperties" : {
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 10
+        "dataSource.password" : "",
+        # merge of reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,hardcoded value,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+        "dataSource.url" : "jdbc:h2:file:/home/laddha/forwards-check/build/nodes/NodeA/persistence;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=100;AUTO_SERVER_PORT=0",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 9
+        "dataSource.user" : "sa",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 7
+        "dataSourceClassName" : "org.h2.jdbcx.JdbcDataSource"
+    },
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 12
+    "devMode" : true,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 2
+    "emailAddress" : "admin@company.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 3
+    "exportJMXto" : "http",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 1
+    "extraAdvertisedServiceIds" : [],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+    "h2port" : 0,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 4
+    "keyStorePassword" : "cordacadevpass",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 2
+    "myLegalName" : "CN=NodeA,O=NodeA,L=London,C=UK",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 3
+    "networkMapService" : {
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 4
+        "address" : "localhost:10002",
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 5
+        "legalName" : "CN=Controller,O=R3,OU=corda,L=London,C=UK"
+    },
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 7
+    "p2pAddress" : "localhost:10005",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 8
+    "rpcAddress" : "localhost:10006",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 9
+    "rpcUsers" : [
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 10
+        {
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 11
+            "password" : "test",
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 12
+            "permissions" : [],
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 13
+            "user" : "user1"
+        }
+    ],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 5
+    "trustStorePassword" : "trustpass",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 14
+    "useHTTPS" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 16
+    "useTestClock" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 17
+    "verifierType" : "InMemory",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 16
+    "webAddress" : "localhost:10007"
+}
+
+[WARN ] 2018-07-10T07:07:09,050Z [main] nodeapi.config.defaultToOldPath - Config key user has been deprecated and will be removed in a future release. Use username instead
+[INFO ] 2018-07-10T07:07:09,144Z [main] internal.Node.logStartupInfo - Vendor: Corda Open Source
+[INFO ] 2018-07-10T07:07:09,149Z [main] internal.Node.logStartupInfo - Release: 0.14.0
+[INFO ] 2018-07-10T07:07:09,154Z [main] internal.Node.logStartupInfo - Platform Version: 1
+[INFO ] 2018-07-10T07:07:09,155Z [main] internal.Node.logStartupInfo - Revision: 0bf3cb6795da38125cd1c0b2b797a9a5e9a65c0c
+[INFO ] 2018-07-10T07:07:09,157Z [main] internal.Node.logStartupInfo - PID: 4912
+[INFO ] 2018-07-10T07:07:09,159Z [main] internal.Node.logStartupInfo - Main class: /home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar
+[INFO ] 2018-07-10T07:07:09,166Z [main] internal.Node.logStartupInfo - CommandLine Args: -Xmx200m -XX:+UseG1GC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5008 -javaagent:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar -Dvisualvm.display.name=Corda -Djava.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.app=net.corda.node.Corda_0.14.0 -Dname=NodeA-corda.jar -Dcapsule.dir=/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.jar=/home/laddha/forwards-check/build/nodes/NodeA/corda.jar
+[INFO ] 2018-07-10T07:07:09,168Z [main] internal.Node.logStartupInfo - Application Args: 
+[INFO ] 2018-07-10T07:07:09,170Z [main] internal.Node.logStartupInfo - bootclasspath: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+[INFO ] 2018-07-10T07:07:09,175Z [main] internal.Node.logStartupInfo - classpath: /home/laddha/forwards-check/build/nodes/NodeA/corda.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jolokia-agent-war-2.0.0-M3.war:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-finance-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-schemas-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-api-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-rpc-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cordform-common-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr305-3.0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-slf4j-impl-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-web-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jul-to-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre8-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-reflect-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/guava-21.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jopt-simple-5.0.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-server-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-core-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jansi-1.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-manifests-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms_rt-7.0.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-jackson-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/metrics-core-3.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jimfs-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/config-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/h2-1.4.194.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/exposed-0.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/HikariCP-2.5.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-core-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-java8-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-client-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-server-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-netty-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/netty-all-4.1.9.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okhttp-3.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-codec-1.10.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/library-master-v1.1-beta-g6215ec8-87.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-kotlin-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/fast-classpath-scanner-2.0.21.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-amqp-protocol-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-core-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-commons-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-fileupload-1.3.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcprov-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-api-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-core-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre7-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-logging-3.3.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-selector-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-journal-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jdbc-store-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jgroups-3.6.13.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-json_1.0_spec-1.0-alpha-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/johnzon-core-0.9.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-log-0.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms-1.1-preview.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jdom-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-module-kotlin-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-dataformat-yaml-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-datatype-jsr310-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/joda-time-2.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javassist-3.20.0-GA.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/antlr-2.7.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jta_1.1_spec-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jandex-2.0.3.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/classmate-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/dom4j-1.6.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-commons-annotations-5.0.1.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cdi-api-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-protocol-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-transport-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.cli-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/groovy-all-1.8.9.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okio-1.11.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jms-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcl-over-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/rxjava-1.2.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-4.0.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-serializers-0.41.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-jexl3-3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-databind-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/eddsa-0.2.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcpkix-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/proton-j-0.19.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-beanutils-1.9.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-io-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-native-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-core-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/snakeyaml-1.17.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/el-api-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr250-api-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javax.inject-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-concurrent-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jms_2.0_spec-1.0-alpha-2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/reflectasm-1.11.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/minlog-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/objenesis-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-collections-3.2.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-serializer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/asm-5.0.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-buffer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-common-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/slf4j-api-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/annotations-13.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-annotations-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar:/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar
+[INFO ] 2018-07-10T07:07:09,190Z [main] internal.Node.logStartupInfo - VM OpenJDK 64-Bit Server VM Oracle Corporation 25.171-b11
+[INFO ] 2018-07-10T07:07:09,195Z [main] internal.Node.logStartupInfo - Machine: A-Laptop-has-no-Name
+[INFO ] 2018-07-10T07:07:09,195Z [main] internal.Node.logStartupInfo - Working Directory: /home/laddha/forwards-check/build/nodes/NodeA
+[INFO ] 2018-07-10T07:07:09,195Z [main] internal.Node.logStartupInfo - Debug port: dt_socket:5008
+[INFO ] 2018-07-10T07:07:09,195Z [main] internal.Node.logStartupInfo - Starting as node on localhost:10005
+[WARN ] 2018-07-10T07:07:09,507Z [main] internal.Node.start - Corda node is running in dev mode.
+[INFO ] 2018-07-10T07:07:13,784Z [main] internal.Node.start - Node starting up ...
+[INFO ] 2018-07-10T07:07:16,071Z [main] BasicInfo.printBasicNodeInfo - Database connection url is              : jdbc:h2:tcp://127.0.1.1:38620/node
+[INFO ] 2018-07-10T07:07:16,348Z [main] hikari.HikariDataSource.<init> - HikariPool-1 - Started.
+[INFO ] 2018-07-10T07:07:17,434Z [main] internal.Node.invoke - Connected to h2 database.
+[INFO ] 2018-07-10T07:07:18,441Z [main] hikari.HikariDataSource.<init> - HikariPool-2 - Started.
+[INFO ] 2018-07-10T07:07:35,862Z [main] internal.Node.discoverPublicHost - Detected public address: /127.0.0.1:49492
+[INFO ] 2018-07-10T07:07:36,019Z [main] BasicInfo.printBasicNodeInfo - Incoming connection address             : 127.0.0.1:10005
+[INFO ] 2018-07-10T07:07:36,175Z [main] internal.Node.obtainKeyPair - identity-private-key not found in keystore /home/laddha/forwards-check/build/nodes/NodeA/certificates/nodekeystore.jks, generating fresh key!
+[INFO ] 2018-07-10T07:07:38,028Z [main] hikari.HikariDataSource.<init> - HikariPool-3 - Started.
+[INFO ] 2018-07-10T07:07:38,130Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@7bfc36d5
+[INFO ] 2018-07-10T07:07:38,895Z [main] hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.6.Final}
+[INFO ] 2018-07-10T07:07:38,904Z [main] cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+[INFO ] 2018-07-10T07:07:39,170Z [main] common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2018-07-10T07:07:39,665Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:39,718Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:42,362Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5c2f5dc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:42,482Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@7bfc36d5
+[INFO ] 2018-07-10T07:07:42,483Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@2cf6b6e6
+[INFO ] 2018-07-10T07:07:42,500Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:42,509Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:42,592Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@16ecdb6d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:42,615Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@2cf6b6e6
+[INFO ] 2018-07-10T07:07:42,615Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@3eed0375
+[INFO ] 2018-07-10T07:07:42,641Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:42,642Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:43,087Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@65bc50c9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:43,197Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@3eed0375
+[INFO ] 2018-07-10T07:07:43,203Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: kotlin.jvm.internal.ArrayIterator@724a80d2
+[INFO ] 2018-07-10T07:07:43,224Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:43,226Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:43,393Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7746330a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:43,534Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: kotlin.jvm.internal.ArrayIterator@724a80d2
+[INFO ] 2018-07-10T07:07:44,045Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@38c840fb
+[INFO ] 2018-07-10T07:07:44,068Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:44,078Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:44,147Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5b1dd206] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:44,184Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@38c840fb
+[INFO ] 2018-07-10T07:07:44,184Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@3ea4dcc5
+[INFO ] 2018-07-10T07:07:44,196Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:44,198Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:44,222Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6942ff10] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:44,242Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@3ea4dcc5
+[INFO ] 2018-07-10T07:07:44,244Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@49ed3b76
+[INFO ] 2018-07-10T07:07:44,253Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-10T07:07:44,257Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-10T07:07:44,421Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7fdf32a4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-10T07:07:44,525Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@49ed3b76
+[INFO ] 2018-07-10T07:07:47,321Z [main] BasicInfo.printBasicNodeInfo - Listening on port                       : 10005
+[INFO ] 2018-07-10T07:07:47,322Z [main] BasicInfo.printBasicNodeInfo - RPC service listening on port           : 10006
+[INFO ] 2018-07-10T07:07:47,500Z [main] messaging.NodeMessagingClient.start - Connecting to message broker: localhost:10005
+[INFO ] 2018-07-10T07:07:48,253Z [main] internal.Node.scanCordapps - Scanning CorDapps in [/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar]
+[INFO ] 2018-07-10T07:07:50,387Z [main] internal.Node.registerInitiatedFlowInternal - Registered com.template.FutureFlow to initiate com.template.FutureFlowResponder (version 1)
+[INFO ] 2018-07-10T07:07:50,523Z [main] internal.Node.registerInitiatedFlowInternal - Registered net.corda.flows.IssuerFlow$IssuanceRequester to initiate net.corda.flows.IssuerFlow$Issuer (version 1)
+[INFO ] 2018-07-10T07:07:52,093Z [main] BasicInfo.printBasicNodeInfo - Loaded plugins                          : com.template.TemplatePlugin
+[INFO ] 2018-07-10T07:07:52,101Z [main] messaging.RPCServer.start - Starting RPC server with configuration RPCServerConfiguration(rpcThreadPoolSize=4, consumerPoolSize=2, producerPoolBound=4, reapInterval=PT1S)
+[INFO ] 2018-07-10T07:07:53,493Z [Node thread] messaging.NodeMessagingClient.invoke - Network map is complete, so removing filter from P2P consumer.
+[INFO ] 2018-07-10T07:07:53,534Z [Node thread] BasicInfo.printBasicNodeInfo - Node for "NodeA" started up and registered in 59.88 sec
+[INFO ] 2018-07-10T07:07:56,517Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-10T07:07:56,520Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-10T07:07:56,523Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JavaLanguage,interface=Language]
+[INFO ] 2018-07-10T07:07:56,525Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-10T07:07:56,530Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-10T07:07:56,550Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-10T07:07:56,767Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-10T07:07:56,770Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-10T07:07:56,790Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-10T07:07:56,794Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-10T07:07:56,798Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[WARN ] 2018-07-10T07:08:28,804Z [Thread-0 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[INFO ] 2018-07-10T07:08:31,288Z [Thread-4] BasicInfo.printBasicNodeInfo - Shutting down ...
+[WARN ] 2018-07-10T07:08:31,423Z [Thread-0 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[WARN ] 2018-07-10T07:08:31,441Z [Thread-0 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[WARN ] 2018-07-10T07:08:31,463Z [Thread-1 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[INFO ] 2018-07-10T07:08:31,570Z [Thread-4] pool.HikariPool.shutdown - HikariPool-1 - Close initiated...
+[INFO ] 2018-07-10T07:08:31,580Z [Thread-4] pool.HikariPool.shutdown - HikariPool-1 - Closed.
+[INFO ] 2018-07-10T07:08:31,582Z [Thread-4] internal.Node.stop - Shutdown complete
+[INFO ] 2018-07-11T07:35:39,984Z [main] manifests.Manifests.info - 109 attributes loaded from 121 stream(s) in 7s, 109 saved, 1664 ignored: ["ActiveMQ-Version", "Agent-Class", "Ant-Version", "App-Class-Path", "Application-Class", "Application-Library-Allowable-Codebase", "Application-Name", "Application-Version", "Archiver-Version", "Bnd-LastModified", "Branch", "Build-Date", "Build-Host", "Build-Id", "Build-Java-Version", "Build-Jdk", "Build-Job", "Build-Number", "Build-Timestamp", "Built-By", "Built-OS", "Built-Status", "Bundle-Activator", "Bundle-Category", "Bundle-ClassPath", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "CLDR-Version", "Caller-Allowable-Codebase", "Can-Redefine-Classes", "Can-Retransform-Classes", "Caplets", "Change", "Class-Path", "Codebase", "Corda-Platform-Version", "Corda-Release-Version", "Corda-Revision", "Corda-Vendor", "Created-By", "DynamicImport-Package", "Eclipse-BuddyPolicy", "Eclipse-LazyStart", "Export-Package", "Extension-Name", "Fragment-Host", "Gradle-Version", "Ignore-Package", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Url", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "JVM-Args", "Java-Agents", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Main-Class", "Main-class", "Manifest-Version", "Min-Java-Version", "Min-Update-Version", "Module-Email", "Module-Origin", "Module-Owner", "Module-Source", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Package", "Permissions", "Premain-Class", "Private-Package", "Provide-Capability", "Require-Capability", "Scm-Connection", "Scm-Revision", "Scm-Url", "Service-Component", "Specification-Title", "Specification-Vendor", "Specification-Version", "System-Properties", "Time-Zone-Database-Version", "Tool", "Trusted-Library", "X-Compile-Source-JDK", "X-Compile-Target-JDK"]
+[INFO ] 2018-07-11T07:35:40,780Z [main] BasicInfo.printBasicNodeInfo - Logs can be found in                    : /home/laddha/forwards-check/build/nodes/NodeA/logs
+[INFO ] 2018-07-11T07:35:41,627Z [main] config.ConfigHelper.loadConfig - Config:
+{
+    # hardcoded value
+    "basedir" : "/home/laddha/forwards-check/build/nodes/NodeA",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 13
+    "certificateSigningService" : "https://cordaci-netperm.corda.r3cev.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 6
+    "dataSourceProperties" : {
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 10
+        "dataSource.password" : "",
+        # merge of reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,hardcoded value,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+        "dataSource.url" : "jdbc:h2:file:/home/laddha/forwards-check/build/nodes/NodeA/persistence;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=100;AUTO_SERVER_PORT=0",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 9
+        "dataSource.user" : "sa",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 7
+        "dataSourceClassName" : "org.h2.jdbcx.JdbcDataSource"
+    },
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 12
+    "devMode" : true,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 2
+    "emailAddress" : "admin@company.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 3
+    "exportJMXto" : "http",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 1
+    "extraAdvertisedServiceIds" : [],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+    "h2port" : 0,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 4
+    "keyStorePassword" : "cordacadevpass",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 2
+    "myLegalName" : "CN=NodeA,O=NodeA,L=London,C=UK",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 3
+    "networkMapService" : {
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 4
+        "address" : "localhost:10002",
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 5
+        "legalName" : "CN=Controller,O=R3,OU=corda,L=London,C=UK"
+    },
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 7
+    "p2pAddress" : "localhost:10005",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 8
+    "rpcAddress" : "localhost:10006",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 9
+    "rpcUsers" : [
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 10
+        {
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 11
+            "password" : "test",
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 12
+            "permissions" : [],
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 13
+            "user" : "user1"
+        }
+    ],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 5
+    "trustStorePassword" : "trustpass",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 14
+    "useHTTPS" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 16
+    "useTestClock" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 17
+    "verifierType" : "InMemory",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 16
+    "webAddress" : "localhost:10007"
+}
+
+[WARN ] 2018-07-11T07:35:47,170Z [main] nodeapi.config.defaultToOldPath - Config key user has been deprecated and will be removed in a future release. Use username instead
+[INFO ] 2018-07-11T07:35:47,258Z [main] internal.Node.logStartupInfo - Vendor: Corda Open Source
+[INFO ] 2018-07-11T07:35:47,260Z [main] internal.Node.logStartupInfo - Release: 0.14.0
+[INFO ] 2018-07-11T07:35:47,261Z [main] internal.Node.logStartupInfo - Platform Version: 1
+[INFO ] 2018-07-11T07:35:47,265Z [main] internal.Node.logStartupInfo - Revision: 0bf3cb6795da38125cd1c0b2b797a9a5e9a65c0c
+[INFO ] 2018-07-11T07:35:47,266Z [main] internal.Node.logStartupInfo - PID: 9042
+[INFO ] 2018-07-11T07:35:47,268Z [main] internal.Node.logStartupInfo - Main class: /home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar
+[INFO ] 2018-07-11T07:35:47,270Z [main] internal.Node.logStartupInfo - CommandLine Args: -Xmx200m -XX:+UseG1GC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5008 -javaagent:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar -Dvisualvm.display.name=Corda -Djava.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.app=net.corda.node.Corda_0.14.0 -Dname=NodeA-corda.jar -Dcapsule.dir=/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.jar=/home/laddha/forwards-check/build/nodes/NodeA/corda.jar
+[INFO ] 2018-07-11T07:35:47,272Z [main] internal.Node.logStartupInfo - Application Args: 
+[INFO ] 2018-07-11T07:35:47,275Z [main] internal.Node.logStartupInfo - bootclasspath: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+[INFO ] 2018-07-11T07:35:47,281Z [main] internal.Node.logStartupInfo - classpath: /home/laddha/forwards-check/build/nodes/NodeA/corda.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jolokia-agent-war-2.0.0-M3.war:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-finance-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-schemas-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-api-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-rpc-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cordform-common-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr305-3.0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-slf4j-impl-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-web-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jul-to-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre8-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-reflect-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/guava-21.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jopt-simple-5.0.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-server-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-core-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jansi-1.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-manifests-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms_rt-7.0.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-jackson-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/metrics-core-3.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jimfs-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/config-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/h2-1.4.194.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/exposed-0.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/HikariCP-2.5.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-core-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-java8-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-client-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-server-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-netty-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/netty-all-4.1.9.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okhttp-3.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-codec-1.10.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/library-master-v1.1-beta-g6215ec8-87.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-kotlin-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/fast-classpath-scanner-2.0.21.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-amqp-protocol-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-core-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-commons-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-fileupload-1.3.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcprov-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-api-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-core-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre7-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-logging-3.3.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-selector-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-journal-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jdbc-store-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jgroups-3.6.13.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-json_1.0_spec-1.0-alpha-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/johnzon-core-0.9.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-log-0.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms-1.1-preview.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jdom-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-module-kotlin-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-dataformat-yaml-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-datatype-jsr310-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/joda-time-2.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javassist-3.20.0-GA.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/antlr-2.7.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jta_1.1_spec-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jandex-2.0.3.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/classmate-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/dom4j-1.6.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-commons-annotations-5.0.1.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cdi-api-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-protocol-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-transport-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.cli-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/groovy-all-1.8.9.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okio-1.11.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jms-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcl-over-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/rxjava-1.2.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-4.0.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-serializers-0.41.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-jexl3-3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-databind-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/eddsa-0.2.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcpkix-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/proton-j-0.19.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-beanutils-1.9.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-io-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-native-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-core-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/snakeyaml-1.17.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/el-api-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr250-api-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javax.inject-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-concurrent-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jms_2.0_spec-1.0-alpha-2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/reflectasm-1.11.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/minlog-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/objenesis-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-collections-3.2.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-serializer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/asm-5.0.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-buffer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-common-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/slf4j-api-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/annotations-13.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-annotations-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar:/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar
+[INFO ] 2018-07-11T07:35:47,300Z [main] internal.Node.logStartupInfo - VM OpenJDK 64-Bit Server VM Oracle Corporation 25.171-b11
+[INFO ] 2018-07-11T07:35:47,302Z [main] internal.Node.logStartupInfo - Machine: A-Laptop-has-no-Name
+[INFO ] 2018-07-11T07:35:47,302Z [main] internal.Node.logStartupInfo - Working Directory: /home/laddha/forwards-check/build/nodes/NodeA
+[INFO ] 2018-07-11T07:35:47,302Z [main] internal.Node.logStartupInfo - Debug port: dt_socket:5008
+[INFO ] 2018-07-11T07:35:47,302Z [main] internal.Node.logStartupInfo - Starting as node on localhost:10005
+[WARN ] 2018-07-11T07:35:47,547Z [main] internal.Node.start - Corda node is running in dev mode.
+[INFO ] 2018-07-11T07:35:49,219Z [main] internal.Node.start - Node starting up ...
+[INFO ] 2018-07-11T07:35:51,186Z [main] BasicInfo.printBasicNodeInfo - Database connection url is              : jdbc:h2:tcp://127.0.1.1:39276/node
+[INFO ] 2018-07-11T07:35:51,350Z [main] hikari.HikariDataSource.<init> - HikariPool-1 - Started.
+[INFO ] 2018-07-11T07:35:52,511Z [main] internal.Node.invoke - Connected to h2 database.
+[INFO ] 2018-07-11T07:35:53,157Z [main] hikari.HikariDataSource.<init> - HikariPool-2 - Started.
+[INFO ] 2018-07-11T07:36:10,690Z [main] internal.Node.discoverPublicHost - Detected public address: /127.0.0.1:54538
+[INFO ] 2018-07-11T07:36:10,862Z [main] BasicInfo.printBasicNodeInfo - Incoming connection address             : 127.0.0.1:10005
+[INFO ] 2018-07-11T07:36:12,328Z [main] hikari.HikariDataSource.<init> - HikariPool-3 - Started.
+[INFO ] 2018-07-11T07:36:12,495Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@f98cff
+[INFO ] 2018-07-11T07:36:13,252Z [main] hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.6.Final}
+[INFO ] 2018-07-11T07:36:13,256Z [main] cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+[INFO ] 2018-07-11T07:36:13,473Z [main] common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2018-07-11T07:36:13,839Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:13,956Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:16,092Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@331da721] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:16,150Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@f98cff
+[INFO ] 2018-07-11T07:36:16,150Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@6c7bc8ac
+[INFO ] 2018-07-11T07:36:16,159Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:16,161Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:16,212Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@309ac89e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:16,251Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@6c7bc8ac
+[INFO ] 2018-07-11T07:36:16,251Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@2db0dd19
+[INFO ] 2018-07-11T07:36:16,262Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:16,275Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:16,582Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@268ee31d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:16,645Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@2db0dd19
+[INFO ] 2018-07-11T07:36:16,647Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: kotlin.jvm.internal.ArrayIterator@33671907
+[INFO ] 2018-07-11T07:36:16,678Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:16,681Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:16,810Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@461e479c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:16,863Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: kotlin.jvm.internal.ArrayIterator@33671907
+[INFO ] 2018-07-11T07:36:17,345Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@630a647c
+[INFO ] 2018-07-11T07:36:17,353Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:17,356Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:17,379Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@97e9568] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:17,394Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@630a647c
+[INFO ] 2018-07-11T07:36:17,394Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@260af8f7
+[INFO ] 2018-07-11T07:36:17,402Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:17,407Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:17,432Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6980e66a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:17,471Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@260af8f7
+[INFO ] 2018-07-11T07:36:17,473Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@1988e095
+[INFO ] 2018-07-11T07:36:17,479Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T07:36:17,480Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T07:36:17,565Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1268ac94] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T07:36:17,619Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@1988e095
+[INFO ] 2018-07-11T07:36:19,967Z [main] BasicInfo.printBasicNodeInfo - Listening on port                       : 10005
+[INFO ] 2018-07-11T07:36:19,968Z [main] BasicInfo.printBasicNodeInfo - RPC service listening on port           : 10006
+[INFO ] 2018-07-11T07:36:20,025Z [main] messaging.NodeMessagingClient.start - Connecting to message broker: localhost:10005
+[INFO ] 2018-07-11T07:36:21,054Z [main] internal.Node.scanCordapps - Scanning CorDapps in [/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar]
+[INFO ] 2018-07-11T07:36:23,415Z [main] internal.Node.registerInitiatedFlowInternal - Registered com.template.FutureFlow to initiate com.template.FutureFlowResponder (version 1)
+[INFO ] 2018-07-11T07:36:23,502Z [main] internal.Node.registerInitiatedFlowInternal - Registered net.corda.flows.IssuerFlow$IssuanceRequester to initiate net.corda.flows.IssuerFlow$Issuer (version 1)
+[INFO ] 2018-07-11T07:36:24,495Z [main] BasicInfo.printBasicNodeInfo - Loaded plugins                          : com.template.TemplatePlugin
+[INFO ] 2018-07-11T07:36:24,499Z [main] messaging.RPCServer.start - Starting RPC server with configuration RPCServerConfiguration(rpcThreadPoolSize=4, consumerPoolSize=2, producerPoolBound=4, reapInterval=PT1S)
+[WARN ] 2018-07-11T07:36:28,939Z [Node thread] messaging.NodeMessagingClient.invoke - Received message d79fb4f6-c1e8-48f9-bb86-d5e2b5fac42a for platform.network_map.push.0 that doesn't have any registered handlers yet
+[WARN ] 2018-07-11T07:36:28,981Z [Node thread] messaging.NodeMessagingClient.invoke - Received message 6588d4ff-1177-4871-93f9-b0a81a46c5fe for platform.network_map.push.0 that doesn't have any registered handlers yet
+[WARN ] 2018-07-11T07:36:29,130Z [Node thread] messaging.NodeMessagingClient.invoke - Received message 9f6f481c-0944-4379-a104-a603d853471a for platform.network_map.push.0 that doesn't have any registered handlers yet
+[INFO ] 2018-07-11T07:36:30,028Z [Node thread] messaging.NodeMessagingClient.invoke - Network map is complete, so removing filter from P2P consumer.
+[INFO ] 2018-07-11T07:36:30,074Z [Node thread] BasicInfo.printBasicNodeInfo - Node for "NodeA" started up and registered in 59.05 sec
+[INFO ] 2018-07-11T07:36:31,883Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-11T07:36:31,886Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-11T07:36:31,887Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JavaLanguage,interface=Language]
+[INFO ] 2018-07-11T07:36:31,888Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-11T07:36:31,898Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T07:36:31,900Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T07:36:31,952Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-11T07:36:31,954Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-11T07:36:31,966Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-11T07:36:31,968Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T07:36:31,970Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T07:46:30,076Z [Thread-4] BasicInfo.printBasicNodeInfo - Shutting down ...
+[WARN ] 2018-07-11T07:46:30,148Z [Thread-2 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[WARN ] 2018-07-11T07:46:30,155Z [Thread-2 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[WARN ] 2018-07-11T07:46:30,164Z [Thread-3 (ActiveMQ-client-global-threads)] core.client.fail - AMQ212037: Connection failure has been detected: AMQ119015: The connection was disconnected because of server shutdown [code=DISCONNECTED]
+[INFO ] 2018-07-11T07:46:30,334Z [Thread-4] pool.HikariPool.shutdown - HikariPool-1 - Close initiated...
+[INFO ] 2018-07-11T07:46:30,354Z [Thread-4] pool.HikariPool.shutdown - HikariPool-1 - Closed.
+[INFO ] 2018-07-11T07:46:30,387Z [Thread-4] internal.Node.stop - Shutdown complete
+[INFO ] 2018-07-11T09:55:31,583Z [main] manifests.Manifests.info - 109 attributes loaded from 121 stream(s) in 2min, 109 saved, 1664 ignored: ["ActiveMQ-Version", "Agent-Class", "Ant-Version", "App-Class-Path", "Application-Class", "Application-Library-Allowable-Codebase", "Application-Name", "Application-Version", "Archiver-Version", "Bnd-LastModified", "Branch", "Build-Date", "Build-Host", "Build-Id", "Build-Java-Version", "Build-Jdk", "Build-Job", "Build-Number", "Build-Timestamp", "Built-By", "Built-OS", "Built-Status", "Bundle-Activator", "Bundle-Category", "Bundle-ClassPath", "Bundle-Description", "Bundle-DocURL", "Bundle-License", "Bundle-ManifestVersion", "Bundle-Name", "Bundle-RequiredExecutionEnvironment", "Bundle-SymbolicName", "Bundle-Vendor", "Bundle-Version", "CLDR-Version", "Caller-Allowable-Codebase", "Can-Redefine-Classes", "Can-Retransform-Classes", "Caplets", "Change", "Class-Path", "Codebase", "Corda-Platform-Version", "Corda-Release-Version", "Corda-Revision", "Corda-Vendor", "Created-By", "DynamicImport-Package", "Eclipse-BuddyPolicy", "Eclipse-LazyStart", "Export-Package", "Extension-Name", "Fragment-Host", "Gradle-Version", "Ignore-Package", "Implementation-Build", "Implementation-Build-Date", "Implementation-Title", "Implementation-URL", "Implementation-Url", "Implementation-Vendor", "Implementation-Vendor-Id", "Implementation-Version", "Import-Package", "Include-Resource", "JCabi-Build", "JCabi-Date", "JCabi-Version", "JVM-Args", "Java-Agents", "Java-Vendor", "Java-Version", "Kotlin-Runtime-Component", "Kotlin-Version", "Log4jReleaseKey", "Log4jReleaseManager", "Log4jReleaseVersion", "Main-Class", "Main-class", "Manifest-Version", "Min-Java-Version", "Min-Update-Version", "Module-Email", "Module-Origin", "Module-Owner", "Module-Source", "Originally-Created-By", "Os-Arch", "Os-Name", "Os-Version", "Package", "Permissions", "Premain-Class", "Private-Package", "Provide-Capability", "Require-Capability", "Scm-Connection", "Scm-Revision", "Scm-Url", "Service-Component", "Specification-Title", "Specification-Vendor", "Specification-Version", "System-Properties", "Time-Zone-Database-Version", "Tool", "Trusted-Library", "X-Compile-Source-JDK", "X-Compile-Target-JDK"]
+[INFO ] 2018-07-11T09:55:44,325Z [main] BasicInfo.printBasicNodeInfo - Logs can be found in                    : /home/laddha/forwards-check/build/nodes/NodeA/logs
+[INFO ] 2018-07-11T09:55:45,730Z [main] config.ConfigHelper.loadConfig - Config:
+{
+    # hardcoded value
+    "basedir" : "/home/laddha/forwards-check/build/nodes/NodeA",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 13
+    "certificateSigningService" : "https://cordaci-netperm.corda.r3cev.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 6
+    "dataSourceProperties" : {
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 10
+        "dataSource.password" : "",
+        # merge of reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,hardcoded value,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 8,reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+        "dataSource.url" : "jdbc:h2:file:/home/laddha/forwards-check/build/nodes/NodeA/persistence;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=10000;WRITE_DELAY=100;AUTO_SERVER_PORT=0",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 9
+        "dataSource.user" : "sa",
+        # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 7
+        "dataSourceClassName" : "org.h2.jdbcx.JdbcDataSource"
+    },
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 12
+    "devMode" : true,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 2
+    "emailAddress" : "admin@company.com",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 3
+    "exportJMXto" : "http",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 1
+    "extraAdvertisedServiceIds" : [],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 15
+    "h2port" : 0,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 4
+    "keyStorePassword" : "cordacadevpass",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 2
+    "myLegalName" : "CN=NodeA,O=NodeA,L=London,C=UK",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 3
+    "networkMapService" : {
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 4
+        "address" : "localhost:10002",
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 5
+        "legalName" : "CN=Controller,O=R3,OU=corda,L=London,C=UK"
+    },
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 7
+    "p2pAddress" : "localhost:10005",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 8
+    "rpcAddress" : "localhost:10006",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 9
+    "rpcUsers" : [
+        # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 10
+        {
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 11
+            "password" : "test",
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 12
+            "permissions" : [],
+            # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 13
+            "user" : "user1"
+        }
+    ],
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 5
+    "trustStorePassword" : "trustpass",
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 14
+    "useHTTPS" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 16
+    "useTestClock" : false,
+    # reference.conf @ jar:file:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar!/reference.conf: 17
+    "verifierType" : "InMemory",
+    # /home/laddha/forwards-check/build/nodes/NodeA/node.conf: 16
+    "webAddress" : "localhost:10007"
+}
+
+[WARN ] 2018-07-11T09:55:50,281Z [main] nodeapi.config.defaultToOldPath - Config key user has been deprecated and will be removed in a future release. Use username instead
+[INFO ] 2018-07-11T09:55:50,297Z [main] internal.Node.logStartupInfo - Vendor: Corda Open Source
+[INFO ] 2018-07-11T09:55:50,299Z [main] internal.Node.logStartupInfo - Release: 0.14.0
+[INFO ] 2018-07-11T09:55:50,300Z [main] internal.Node.logStartupInfo - Platform Version: 1
+[INFO ] 2018-07-11T09:55:50,302Z [main] internal.Node.logStartupInfo - Revision: 0bf3cb6795da38125cd1c0b2b797a9a5e9a65c0c
+[INFO ] 2018-07-11T09:55:50,303Z [main] internal.Node.logStartupInfo - PID: 15652
+[INFO ] 2018-07-11T09:55:50,305Z [main] internal.Node.logStartupInfo - Main class: /home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar
+[INFO ] 2018-07-11T09:55:50,307Z [main] internal.Node.logStartupInfo - CommandLine Args: -Xmx200m -XX:+UseG1GC -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5008 -javaagent:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar -Dvisualvm.display.name=Corda -Djava.library.path=/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.app=net.corda.node.Corda_0.14.0 -Dname=NodeA-corda.jar -Dcapsule.dir=/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0 -Dcapsule.jar=/home/laddha/forwards-check/build/nodes/NodeA/corda.jar
+[INFO ] 2018-07-11T09:55:50,309Z [main] internal.Node.logStartupInfo - Application Args: 
+[INFO ] 2018-07-11T09:55:50,311Z [main] internal.Node.logStartupInfo - bootclasspath: /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes
+[INFO ] 2018-07-11T09:55:50,312Z [main] internal.Node.logStartupInfo - classpath: /home/laddha/forwards-check/build/nodes/NodeA/corda.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jolokia-agent-war-2.0.0-M3.war:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-finance-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-schemas-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-api-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-rpc-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cordform-common-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr305-3.0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-slf4j-impl-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-web-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jul-to-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre8-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-reflect-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/guava-21.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jopt-simple-5.0.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-server-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-core-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jansi-1.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-manifests-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms_rt-7.0.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-jackson-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/metrics-core-3.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jimfs-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/config-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/h2-1.4.194.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/exposed-0.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/HikariCP-2.5.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-core-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-java8-5.2.6.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-client-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-server-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-netty-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/netty-all-4.1.9.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okhttp-3.5.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-codec-1.10.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/library-master-v1.1-beta-g6215ec8-87.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-kotlin-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/fast-classpath-scanner-2.0.21.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-amqp-protocol-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-core-0.14.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-commons-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-fileupload-1.3.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcprov-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-api-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/log4j-core-2.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-jre7-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kotlin-stdlib-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-logging-3.3.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-selector-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-journal-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jdbc-store-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jgroups-3.6.13.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-json_1.0_spec-1.0-alpha-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/johnzon-core-0.9.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcabi-log-0.14.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/forms-1.1-preview.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jdom-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-module-kotlin-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-dataformat-yaml-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-datatype-jsr310-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/joda-time-2.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javassist-3.20.0-GA.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/antlr-2.7.7.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jta_1.1_spec-1.1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jandex-2.0.3.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/classmate-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/dom4j-1.6.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/hibernate-commons-annotations-5.0.1.Final.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/cdi-api-1.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/copycat-protocol-1.2.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-transport-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/crash.cli-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/groovy-all-1.8.9.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/okio-1.11.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/requery-1.3.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-jms-client-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jcl-over-slf4j-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/rxjava-1.2.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-4.0.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/kryo-serializers-0.41.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-jexl3-3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-databind-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/eddsa-0.2.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/bcpkix-jdk15on-1.57.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/proton-j-0.19.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-beanutils-1.9.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-io-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/artemis-native-2.1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-core-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/snakeyaml-1.17.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/el-api-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jboss-interceptors-api_1.1_spec-1.0.0.Beta1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jsr250-api-1.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/javax.inject-1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-concurrent-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/geronimo-jms_2.0_spec-1.0-alpha-2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/reflectasm-1.11.3.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/minlog-1.3.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/objenesis-2.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/commons-collections-3.2.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-serializer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/asm-5.0.4.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-buffer-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/catalyst-common-1.1.2.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/slf4j-api-1.7.25.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/annotations-13.0.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/jackson-annotations-2.8.5.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/corda-node-0.14.0.jar:/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar:/home/laddha/.capsule/apps/net.corda.node.Corda_0.14.0/quasar-core-0.7.6-jdk8.jar
+[INFO ] 2018-07-11T09:55:50,316Z [main] internal.Node.logStartupInfo - VM OpenJDK 64-Bit Server VM Oracle Corporation 25.171-b11
+[INFO ] 2018-07-11T09:55:50,317Z [main] internal.Node.logStartupInfo - Machine: A-Laptop-has-no-Name
+[INFO ] 2018-07-11T09:55:50,318Z [main] internal.Node.logStartupInfo - Working Directory: /home/laddha/forwards-check/build/nodes/NodeA
+[INFO ] 2018-07-11T09:55:50,320Z [main] internal.Node.logStartupInfo - Debug port: dt_socket:5008
+[INFO ] 2018-07-11T09:55:50,322Z [main] internal.Node.logStartupInfo - Starting as node on localhost:10005
+[WARN ] 2018-07-11T09:55:50,485Z [main] internal.Node.start - Corda node is running in dev mode.
+[INFO ] 2018-07-11T09:55:51,314Z [main] internal.Node.start - Node starting up ...
+[INFO ] 2018-07-11T09:55:52,445Z [main] BasicInfo.printBasicNodeInfo - Database connection url is              : jdbc:h2:tcp://127.0.1.1:43508/node
+[INFO ] 2018-07-11T09:55:52,563Z [main] hikari.HikariDataSource.<init> - HikariPool-1 - Started.
+[INFO ] 2018-07-11T09:55:54,486Z [main] internal.Node.invoke - Connected to h2 database.
+[INFO ] 2018-07-11T09:55:55,104Z [main] hikari.HikariDataSource.<init> - HikariPool-2 - Started.
+[INFO ] 2018-07-11T09:56:39,132Z [main] internal.Node.discoverPublicHost - Detected public address: /127.0.0.1:33700
+[INFO ] 2018-07-11T09:56:39,313Z [main] BasicInfo.printBasicNodeInfo - Incoming connection address             : 127.0.0.1:10005
+[INFO ] 2018-07-11T09:56:41,552Z [main] hikari.HikariDataSource.<init> - HikariPool-3 - Started.
+[INFO ] 2018-07-11T09:56:41,700Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@72240290
+[INFO ] 2018-07-11T09:56:42,449Z [main] hibernate.Version.logVersion - HHH000412: Hibernate Core {5.2.6.Final}
+[INFO ] 2018-07-11T09:56:42,461Z [main] cfg.Environment.<clinit> - HHH000206: hibernate.properties not found
+[INFO ] 2018-07-11T09:56:42,669Z [main] common.Version.<clinit> - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2018-07-11T09:56:43,257Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:43,349Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:47,222Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5834fd3f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:47,366Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@72240290
+[INFO ] 2018-07-11T09:56:47,366Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@dc28d74
+[INFO ] 2018-07-11T09:56:47,375Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:47,379Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:47,465Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3ed4c822] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:47,514Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@dc28d74
+[INFO ] 2018-07-11T09:56:47,519Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@7b6558aa
+[INFO ] 2018-07-11T09:56:47,542Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:47,545Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:48,143Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@79408109] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:48,288Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@7b6558aa
+[INFO ] 2018-07-11T09:56:48,288Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: kotlin.jvm.internal.ArrayIterator@16c6d5a2
+[INFO ] 2018-07-11T09:56:48,304Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:48,307Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:48,481Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@701153c1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:48,597Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: kotlin.jvm.internal.ArrayIterator@16c6d5a2
+[INFO ] 2018-07-11T09:56:49,679Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@7296675e
+[INFO ] 2018-07-11T09:56:49,691Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:49,693Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:49,734Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7115d5af] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:49,765Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@7296675e
+[INFO ] 2018-07-11T09:56:49,765Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@7ce58c1c
+[INFO ] 2018-07-11T09:56:49,826Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:49,827Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:49,877Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@52d202f0] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:49,958Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@7ce58c1c
+[INFO ] 2018-07-11T09:56:49,958Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Creating session factory for schemas: java.util.Collections$1@7fe75649
+[INFO ] 2018-07-11T09:56:49,969Z [main] internal.ConnectionProviderInitiator.initiateService - HHH000130: Instantiating explicit connection provider: net.corda.node.services.database.HibernateConfiguration$NodeDatabaseConnectionProvider
+[INFO ] 2018-07-11T09:56:49,970Z [main] dialect.Dialect.<init> - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+[INFO ] 2018-07-11T09:56:50,052Z [main] connections.access.getIsolatedConnection - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1915879c] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2018-07-11T09:56:50,100Z [main] database.HibernateConfiguration.makeSessionFactoryForSchemas - Created session factory for schemas: java.util.Collections$1@7fe75649
+[INFO ] 2018-07-11T09:56:54,949Z [main] BasicInfo.printBasicNodeInfo - Listening on port                       : 10005
+[INFO ] 2018-07-11T09:56:54,950Z [main] BasicInfo.printBasicNodeInfo - RPC service listening on port           : 10006
+[INFO ] 2018-07-11T09:56:54,980Z [main] messaging.NodeMessagingClient.start - Connecting to message broker: localhost:10005
+[INFO ] 2018-07-11T09:56:55,734Z [main] internal.Node.scanCordapps - Scanning CorDapps in [/home/laddha/forwards-check/build/nodes/NodeA/plugins/forwards-check-0.1.jar]
+[INFO ] 2018-07-11T09:57:03,049Z [main] internal.Node.registerInitiatedFlowInternal - Registered com.template.FutureFlow to initiate com.template.FutureFlowResponder (version 1)
+[INFO ] 2018-07-11T09:57:03,210Z [main] internal.Node.registerInitiatedFlowInternal - Registered net.corda.flows.IssuerFlow$IssuanceRequester to initiate net.corda.flows.IssuerFlow$Issuer (version 1)
+[INFO ] 2018-07-11T09:57:04,255Z [main] BasicInfo.printBasicNodeInfo - Loaded plugins                          : com.template.TemplatePlugin
+[INFO ] 2018-07-11T09:57:04,257Z [main] messaging.RPCServer.start - Starting RPC server with configuration RPCServerConfiguration(rpcThreadPoolSize=4, consumerPoolSize=2, producerPoolBound=4, reapInterval=PT1S)
+[WARN ] 2018-07-11T09:57:04,377Z [Node thread] messaging.NodeMessagingClient.invoke - Received message 73af0a0a-5aa0-4bad-ae2c-3808ee55bd3a for platform.network_map.push.0 that doesn't have any registered handlers yet
+[WARN ] 2018-07-11T09:57:09,534Z [Node thread] messaging.NodeMessagingClient.invoke - Received message 8cc160ba-918a-4d60-87ab-2c7148c69619 for platform.network_map.push.0 that doesn't have any registered handlers yet
+[WARN ] 2018-07-11T09:57:10,400Z [Node thread] messaging.NodeMessagingClient.invoke - Received message c38d9482-ff67-4722-a830-1541ef2186df for platform.network_map.push.0 that doesn't have any registered handlers yet
+[INFO ] 2018-07-11T09:57:12,338Z [Node thread] messaging.NodeMessagingClient.invoke - Network map is complete, so removing filter from P2P consumer.
+[INFO ] 2018-07-11T09:57:12,408Z [Node thread] BasicInfo.printBasicNodeInfo - Node for "NodeA" started up and registered in 216.8 sec
+[INFO ] 2018-07-11T09:57:15,406Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-11T09:57:15,411Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-11T09:57:15,423Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JavaLanguage,interface=Language]
+[INFO ] 2018-07-11T09:57:15,425Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-11T09:57:15,429Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T09:57:15,439Z [Node thread] plugin.PluginManager.getPlugins - Loaded plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T09:57:15,534Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=GroovyLanguageProxy,interface=Language]
+[INFO ] 2018-07-11T09:57:15,535Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=ScriptLanguage,interface=Language]
+[INFO ] 2018-07-11T09:57:15,562Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=CRaSHShellFactory,interface=ShellFactory]
+[INFO ] 2018-07-11T09:57:15,562Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=JaasAuthenticationPlugin,interface=AuthenticationPlugin]
+[INFO ] 2018-07-11T09:57:15,563Z [Node thread] plugin.PluginManager.getPlugins - Initialized plugin Plugin[type=SimpleAuthenticationPlugin,interface=AuthenticationPlugin]
+[WARN ] 2018-07-11T09:59:02,489Z [Command line shell processor] console.Mode.on - Operation QUOTED_INSERT not mapped in  mode Mode.EMACS
+[ERROR] 2018-07-11T10:00:57,713Z [pool-11-thread-3] command.CRaSHSession.execute - Error while evaluating request 'start FutureFlow futurePrice: $100 otherParty: NodeB, futureDate: 2018-11-15, futureQuantity: 100' start FutureFlow futurePrice: $100 otherParty: NodeB, futureDate: 2018-11-15, futureQuantity: 100: exception: while parsing a flow mapping
+ in 'reader', line 1, column 1:
+    { futurePrice: $100 otherParty:  ... 
+    ^
+expected ',' or '}', but got Value
+ in 'reader', line 1, column 31:
+    { futurePrice: $100 otherParty: NodeB, futureDate: 2018-11-15, ... 
+                                  ^
+
+ at [Source: java.io.StringReader@bbdb0e9; line: 1, column: 31]
+com.fasterxml.jackson.dataformat.yaml.snakeyaml.error.MarkedYAMLException: while parsing a flow mapping
+ in 'reader', line 1, column 1:
+    { futurePrice: $100 otherParty:  ... 
+    ^
+expected ',' or '}', but got Value
+ in 'reader', line 1, column 31:
+    { futurePrice: $100 otherParty: NodeB, futureDate: 2018-11-15, ... 
+                                  ^
+
+ at [Source: java.io.StringReader@bbdb0e9; line: 1, column: 31]
+	at com.fasterxml.jackson.dataformat.yaml.snakeyaml.error.MarkedYAMLException.from(MarkedYAMLException.java:27) ~[jackson-dataformat-yaml-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:343) ~[jackson-dataformat-yaml-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.core.JsonParser.nextFieldName(JsonParser.java:708) ~[jackson-core-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.databind.deser.std.BaseNodeDeserializer.deserializeObject(JsonNodeDeserializer.java:221) ~[jackson-databind-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer.deserialize(JsonNodeDeserializer.java:69) ~[jackson-databind-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer.deserialize(JsonNodeDeserializer.java:15) ~[jackson-databind-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3798) ~[jackson-databind-2.8.5.jar:2.8.5]
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:2381) ~[jackson-databind-2.8.5.jar:2.8.5]
+	at net.corda.jackson.StringToMethodCallParser.parseArguments(StringToMethodCallParser.kt:194) ~[corda-jackson-0.14.0.jar:?]
+	at net.corda.node.shell.InteractiveShell.runFlowFromString(InteractiveShell.kt:285) ~[corda-node-0.14.0.jar:?]
+	at net.corda.node.shell.InteractiveShell.runFlowFromString$default(InteractiveShell.kt:270) ~[corda-node-0.14.0.jar:?]
+	at net.corda.node.shell.InteractiveShell.runFlowByNameFragment(InteractiveShell.kt:230) ~[corda-node-0.14.0.jar:?]
+	at net.corda.node.shell.FlowShellCommand.startFlow(FlowShellCommand.java:46) ~[corda-node-0.14.0.jar:?]
+	at net.corda.node.shell.StartShellCommand.main(StartShellCommand.java:14) ~[corda-node-0.14.0.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_171]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_171]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_171]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_171]
+	at org.crsh.cli.impl.lang.MethodDescriptor$1.invoke(MethodDescriptor.java:164) ~[crash.cli-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.cli.impl.lang.MethodDescriptor$1.invoke(MethodDescriptor.java:106) ~[crash.cli-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.lang.impl.java.ProducerCommandMatch$1.close(ProducerCommandMatch.java:117) ~[crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.command.pipeline.CommandInvokerAdapter.close(CommandInvokerAdapter.java:296) ~[crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.command.pipeline.PipeLine.close(PipeLine.java:106) ~[crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.command.spi.CommandInvoker.invoke(CommandInvoker.java:52) ~[crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.command.CRaSHCommandProcess.doInvoke(CRaSHCommandProcess.java:39) ~[crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.command.CRaSHProcess.execute(CRaSHProcess.java:60) [crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.async.AsyncProcess$2.call(AsyncProcess.java:207) [crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at org.crsh.shell.impl.async.AsyncProcess$2.call(AsyncProcess.java:177) [crash.shell-9d242da2a10e686f33a3aefc69e4768824ad0716.jar:?]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_171]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_171]
+Caused by: org.yaml.snakeyaml.parser.ParserException: while parsing a flow mapping
+ in 'reader', line 1, column 1:
+    { futurePrice: $100 otherParty:  ... 
+    ^
+expected ',' or '}', but got Value
+ in 'reader', line 1, column 31:
+    { futurePrice: $100 otherParty: NodeB, futureDate: 2018-11-15, ... 
+                                  ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseFlowMappingKey.produce(ParserImpl.java:729) ~[snakeyaml-1.17.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:157) ~[snakeyaml-1.17.jar:?]
+	at org.yaml.snakeyaml.parser.ParserImpl.getEvent(ParserImpl.java:167) ~[snakeyaml-1.17.jar:?]
+	at com.fasterxml.jackson.dataformat.yaml.YAMLParser.nextToken(YAMLParser.java:340) ~[jackson-dataformat-yaml-2.8.5.jar:2.8.5]
+	... 30 more
+[WARN ] 2018-07-11T10:01:39,411Z [Node thread] flow.[b3e0f2da-7be6-4561-8ed1-c220ee6b9a02].maybeWireUpProgressTracking - ProgressTracker has not been started
+[INFO ] 2018-07-11T10:01:39,689Z [Messaging] messaging.NodeMessagingClient.createQueueIfAbsent - Create fresh queue internal.peers.8Kqd4oWdx4KQGHGKBd1aZvs7woweUCfgzAYcT6de9ecg9ZcqgudD5GBGvQJ bound on same address
+[WARN ] 2018-07-11T10:01:42,170Z [Node thread] flow.[b3e0f2da-7be6-4561-8ed1-c220ee6b9a02].uncaughtException - Caught exception from flow
+java.lang.IllegalStateException: Cannot rewind a progress tracker once it has ended
+	at net.corda.core.utilities.ProgressTracker.setCurrentStep(ProgressTracker.kt:104) ~[corda-core-0.14.0.jar:?]
+	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:124) ~[corda-node-0.14.0.jar:?]
+	at net.corda.node.services.statemachine.FlowStateMachineImpl.run(FlowStateMachineImpl.kt:33) ~[corda-node-0.14.0.jar:?]
+	at co.paralleluniverse.fibers.Fiber.run1(Fiber.java:1067) [quasar-core-0.7.6-jdk8.jar:0.7.6]
+	at co.paralleluniverse.fibers.Fiber.exec(Fiber.java:767) [quasar-core-0.7.6-jdk8.jar:0.7.6]
+	at co.paralleluniverse.fibers.RunnableFiberTask.doExec(RunnableFiberTask.java:100) [quasar-core-0.7.6-jdk8.jar:0.7.6]
+	at co.paralleluniverse.fibers.RunnableFiberTask.run(RunnableFiberTask.java:91) [quasar-core-0.7.6-jdk8.jar:0.7.6]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_171]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_171]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [?:1.8.0_171]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_171]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_171]
+	at net.corda.node.utilities.AffinityExecutor$ServiceAffinityExecutor$1$thread$1.run(AffinityExecutor.kt:69) [corda-node-0.14.0.jar:?]
+[INFO ] 2018-07-11T10:04:08,385Z [Command line shell terminator] shell.InteractiveShell.invoke - Command shell has exited
+[INFO ] 2018-07-11T10:04:08,391Z [Command line shell terminator] BasicInfo.printBasicNodeInfo - Shutting down ...
