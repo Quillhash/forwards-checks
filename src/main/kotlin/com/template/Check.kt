@@ -27,7 +27,7 @@ import net.corda.core.transactions.TransactionBuilder
 import net.corda.core.flows.*
 import java.time.LocalDate
 import net.corda.core.transactions.SignedTransaction
-import net.corda.contracts.asset.sumCashBy
+import net.corda.contracts.asset.sumCash
 import java.time.Instant
 import java.util.*
 
@@ -50,6 +50,7 @@ class TemplateApi(val services: CordaRPCOps) {
 // * Contract Code *
 // *****************
 class FutureContract : Contract {
+    
 
     // The legal contract reference - we have to change to actual legal contract reference.
     override val legalContractReference: SecureHash = SecureHash.sha256("https://en.wikipedia.org/wiki/Forwards")
@@ -58,7 +59,6 @@ class FutureContract : Contract {
 
         val command = tx.commands.requireSingleCommand<CommandData>()
         val timeWindow: TimeWindow? = tx.timeWindow
-
             when (command.value) {
                 // see how to group
                 is Commands.Move -> {
@@ -75,8 +75,8 @@ class FutureContract : Contract {
                     val input = tx.inputs.single() as FutureState
                     val output = tx.outputs.single()
                     // Redemption of the paper requires movement of on-ledger cash.
-                    //val received = tx.outputs.sumCashBy(input.owner)
-                    val time = timeWindow?.fromTime ?: throw IllegalArgumentException("Redemptions must have a time-window")
+                    //val received = tx.outputs.sumCash()
+                   // val time = timeWindow?.fromTime ?: throw IllegalArgumentException("Redemptions must have a time-window")
                     requireThat {
                         "the paper must have matured" using (LocalDate.now() >= input.maturityDate)
                         //  "the received amount equals the face value" using (received == input.price)
@@ -102,7 +102,7 @@ class FutureContract : Contract {
 
                 is Commands.Issue -> {
                     val output = tx.outputs.single()
-                    val time = timeWindow?.untilTime ?: throw IllegalArgumentException("Issuances have a time-window")
+                    //val time = timeWindow?.untilTime ?: throw IllegalArgumentException("Issuances have a time-window")
                     requireThat {
                         // Constraints on the shape of the transaction.
                         "No inputs should be consumed when issuing a Future contract." using (tx.inputs.isEmpty())
@@ -126,6 +126,7 @@ class FutureContract : Contract {
             }
         }  
     }
+
 
     // Our Create command.
     interface Commands: CommandData {
@@ -184,7 +185,7 @@ class FutureFlow(val futurePrice: Amount<Issued<Currency>>,
         val txBuilder = TransactionBuilder(notary = notary)
 
         // We add the items to the builder.
-        val state = FutureState(futurePrice, otherParty, me, futureDate, futureQuantity)
+        val state = FutureState(futurePrice, otherParty, me, futureQuantity, futureDate)
         val cmd = Command(Commands.Move(), listOf(me.owningKey, otherParty.owningKey))
         txBuilder.withItems(state, cmd)
 
@@ -224,7 +225,7 @@ class IssuerFlow(val futurePrice: Amount<Issued<Currency>>,
 
         // We add the items to the builder.
         val state = FutureState(futurePrice, me, otherParty, futureQuantity, futureDate)
-        val cmd = Command(Commands.Move(), listOf(me.owningKey, otherParty.owningKey))
+        val cmd = Command(Commands.Issue(), listOf(me.owningKey, otherParty.owningKey))
         txBuilder.withItems(state, cmd)
 
         // Verifying the transaction.
@@ -258,7 +259,7 @@ class FutureFlowResponder(val otherParty: Party) : FlowLogic<Unit>(){
 }
 
 @InitiatedBy(IssuerFlow::class)
-class FutureFlowResponder(val otherParty: Party) : FlowLogic<Unit>(){
+class IssuerFlowResponder(val otherParty: Party) : FlowLogic<Unit>(){
 	@Suspendable
     override fun call() {
         val signTransactionFlow = object : SignTransactionFlow(otherParty, SignTransactionFlow.tracker()) {
